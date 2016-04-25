@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to userrails_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_userrail_path(@userrail), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show userrail</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>G:</dt>
+  <dd><%= @userrail.g %></dd>
+
+  <dt>Scaffold:</dt>
+  <dd><%= @userrail.scaffold %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @userrail.user %></dd>
+
+  <dt>First name:</dt>
+  <dd><%= @userrail.first_name %></dd>
+
+  <dt>Last name:</dt>
+  <dd><%= @userrail.last_name %></dd>
+
+  <dt>Display name:</dt>
+  <dd><%= @userrail.display_name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @userrail.email %></dd>
+
+  <dt>Password digest:</dt>
+  <dd><%= @userrail.password_digest %></dd>
+
+  <dt>Remember token:</dt>
+  <dd><%= @userrail.remember_token %></dd>
+
+</dl>

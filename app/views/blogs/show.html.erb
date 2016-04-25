@@ -7,20 +7,15 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show blog</h1>
+  <h1>Blog</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Title:</dt>
-  <dd><%= @blog.title %></dd>
+<h1><%= @blog.title %></h1>>
 
-  <dt>Photo:</dt>
-  <dd><%= @blog.photo %></dd>
+  <img class="photo_url" src="<%= @blog.photo %>">
 
-  <dt>Post:</dt>
-  <dd><%= @blog.post %></dd>
+  <p><%= @blog.post %></p>
 
-  <dt>Created:</dt>
-  <dd><%= @todo.created_at %></dd>
+
 
 </dl>

@@ -1,0 +1,45 @@
+<div class="page-header">
+  <%= link_to new_userrail_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Userrail
+  <% end %>
+  <h1>Listing userrails</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>G</th>
+            <th>Scaffold</th>
+            <th>User</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Display name</th>
+            <th>Email</th>
+            <th>Password digest</th>
+            <th>Remember token</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @userrails) do |userrail| %>
+            <td><%= userrail.g %></td>
+            <td><%= userrail.scaffold %></td>
+            <td><%= userrail.user %></td>
+            <td><%= userrail.first_name %></td>
+            <td><%= userrail.last_name %></td>
+            <td><%= userrail.display_name %></td>
+            <td><%= userrail.email %></td>
+            <td><%= userrail.password_digest %></td>
+            <td><%= userrail.remember_token %></td>
+            <td><%= link_to 'Show', userrail %></td>
+        <td><%= link_to 'Edit', edit_userrail_path(userrail) %></td>
+        <td><%= link_to 'Destroy', userrail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

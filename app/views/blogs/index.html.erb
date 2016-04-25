@@ -6,28 +6,9 @@
   <h1>Your Blogs</h1>
 </div>
 
-<div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
-    <thead>
-      <tr>
-            <th>Title</th>
-            <th>Photo</th>
-            <th>Post</th>
-            <th>Show</th>
-            <th>Edit</th>
-            <th>Delete</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <%= content_tag_for(:tr, @blogs) do |blog| %>
-            <td><%= blog.title %></td>
-            <td><%= blog.photo %></td>
-            <td><%= blog.post %></td>
-            <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% @blogs.each do |blog| %>
+        <h1><%= link_to blog.title, blog %></h1>
+        <img class="photo_url" src="<%= blog.photo %>">
+        <p><%= blog.post %></p>
+        <%= link_to "Edit Blog", edit_blog_path(blog) , class: 'btn btn-primary' %>
       <% end %>
-    </tbody>
-  </table>
-</div>
