@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
+  before_action :signed_in_user
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order(created_at: :desc)
+    @blogs = currernt_user.blogs.order(created_at: :desc)
   end
 
   # GET /blogs/1
@@ -25,7 +26,7 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-    @names = [1,2,3]
+    @blog.user = currernt_user
 
     respond_to do |format|
       if @blog.save

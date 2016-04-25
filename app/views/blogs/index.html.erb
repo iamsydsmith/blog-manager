@@ -11,4 +11,5 @@
         <img class="photo_url" src="<%= blog.photo %>">
         <p><%= blog.post %></p>
         <%= link_to "Edit Blog", edit_blog_path(blog) , class: 'btn btn-primary' %>
+        <%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' , class: 'btn btn-primary'} %>
       <% end %>
