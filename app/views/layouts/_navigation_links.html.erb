@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <li><%= link_to 'Blogs', blogs_path %></li>
-  <li><%= link_to @current_user, user_path(@current_user) %></li>
+  <li><%= link_to @current_user.display_name, user_path(@current_user) %></li>
   <li><%= link_to 'Sign out', signout_path, method: 'delete' %></li>
 <% else %>
   <li><%= link_to 'Sign up', signup_path %></li>

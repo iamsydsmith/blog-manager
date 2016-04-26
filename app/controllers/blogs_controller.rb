@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :signed_in_user
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -73,4 +74,9 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :photo, :post)
     end
+
+    def verify_correct_user
+       @blog = current_user.blogs.find_by(id: params[:id])
+       redirect_to root_url, notice: 'Access Denied!' if @blog.nil?
+     end
 end

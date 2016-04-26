@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+$body-bg: white;
+
+.title {
+  font-family: "Roboto Slab", serif;
+}
+
+.blog-post {
+  background-color: white;
+  border:1px solid gray;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.button {
+  border-top:1px solid gray;
+  width: 349px;
+  padding: 15px 32px;
+  text-align: center;
+  display:inline-block;
+  margin-top: 4px;
+}
+
+.button1 {
+  border-right:1px solid gray;
+}
+
+.author {
+  font-weight: bold;
+}
+
+p {
+    font-family: "Raleway", serif;
+}
+
+

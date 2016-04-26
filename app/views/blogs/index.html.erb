@@ -3,13 +3,17 @@
     <span class="glyphicon glyphicon-plus"></span>
     New Blog
   <% end %>
-  <h1>Your Blogs</h1>
+  <h1>Your Posts</h1>
 </div>
 
   <% @blogs.each do |blog| %>
-        <h1><%= link_to blog.title, blog %></h1>
+  <div class="blog-post">
         <img class="photo_url" src="<%= blog.photo %>">
+        <h1 class="title"><%= link_to blog.title, blog %></h1>
         <p><%= blog.post %></p>
-        <%= link_to "Edit Blog", edit_blog_path(blog) , class: 'btn btn-primary' %>
-        <%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' , class: 'btn btn-primary'} %>
+        <p class="author">Author: <%= link_to blog.user.display_name, blog.user %></p>
+        <%= link_to "Edit Blog", edit_blog_path(blog) , class: 'button button1' %><%= link_to 'Delete', blog, class: 'button', method: :delete, data: { confirm: 'Are you sure?' , } %>
+        </div>
       <% end %>
+
+
