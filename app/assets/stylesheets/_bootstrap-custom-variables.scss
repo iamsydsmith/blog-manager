@@ -1,10 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
+$font-stack: "Roboto Slab", serif;
 $body-bg: white;
+
+.header {
+  font: $font-stack;
+}
 
 .title {
   font-family: "Roboto Slab", serif;
+}
+
+.link:hover {
+  text-decoration: none;
 }
 
 .blog-post {
@@ -15,25 +24,49 @@ $body-bg: white;
   width: 700px;
 }
 
-.button {
-  border-top:1px solid gray;
-  width: 349px;
-  padding: 15px 32px;
+.content {
+  padding: 40px;
   text-align: center;
-  display:inline-block;
-  margin-top: 4px;
 }
 
-.button1 {
-  border-right:1px solid gray;
+p {
+    font-family: "Raleway", serif;
+}
+
+.byline {
+  display:inline-block;
 }
 
 .author {
   font-weight: bold;
 }
 
-p {
-    font-family: "Raleway", serif;
+.photo {
+  width: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
 }
+
+.button {
+  border-top:1px solid gray;
+  width: 349px;
+  padding: 15px 32px;
+  text-align: center;
+  display:inline-block;
+}
+
+.button1 {
+  border-right:1px solid gray;
+}
+
+.hover:hover {
+  text-decoration: none;
+  background: #4af;
+  color: white;
+}
+
+
+
+
 
 
