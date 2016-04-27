@@ -38,6 +38,13 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_region => 'us-east-1',
+  :s3_credentials => {
+    :bucket => 'notebook-photos',
+    :access_key_id => 'AKIAJGQP2P5M2GKHSHFQ',
+    :secret_access_key => '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'
+  }
+}
 end
