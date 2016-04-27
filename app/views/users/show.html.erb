@@ -9,15 +9,16 @@
 
 
 <div class="profile">
+  <h1><%= @user.display_name %></h1>
+
   <%= image_tag @user.avatar.url, class: "image" %>
+  <br><br>
 
-  <p><%= @user.first_name %></p>
+  <p><strong>First name:</strong> <%= @user.first_name %></p>
 
-  <p><%= @user.last_name %></p>
+  <p><strong>Last name:</strong> <%= @user.last_name %></p>
 
-  <p><%= @user.display_name %></p>
-
-  <p><%= @user.email %></p>
+  <p><strong>Email:</strong> <%= @user.email %></p>
 
   </div>
 

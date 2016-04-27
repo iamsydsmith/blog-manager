@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
-  }
+  }, default_url: ""
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   before_save { email.downcase! }
