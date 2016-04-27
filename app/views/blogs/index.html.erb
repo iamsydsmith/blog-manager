@@ -15,7 +15,7 @@
         <div class="byline">
           <%= image_tag blog.user.avatar.url, class: 'photo' %>
           <p class="author link"><%= link_to blog.user.display_name, blog.user %></p>
-        </div><br>
+        </div>
         </div>
         <%= link_to "Edit Blog", edit_blog_path(blog) , class: 'button button1 hover' %><%= link_to 'Delete', blog, class: 'button hover', method: :delete, data: { confirm: 'Are you sure?' , } %>
         </div>

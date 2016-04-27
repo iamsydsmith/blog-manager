@@ -30,6 +30,8 @@ gem 'bootstrap-generators', '~> 3.3.4'
 
 gem "paperclip", "~> 5.0.0.beta1"
 
+gem 'aws-sdk'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
