@@ -4,24 +4,22 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Your Account</h1>
+  <h1>My Profile</h1>
 </div>
 
-<dl class="dl-horizontal">
 
-  <%= image_tag @user.avatar.url %>
+<div class="profile">
+  <%= image_tag @user.avatar.url, class: "image" %>
 
-  <dt>Name:</dt>
-  <dd><%= @user.first_name %></dd>
+  <p><%= @user.first_name %></p>
 
-  <dt>Last name:</dt>
-  <dd><%= @user.last_name %></dd>
+  <p><%= @user.last_name %></p>
 
-  <dt>Display name:</dt>
-  <dd><%= @user.display_name %></dd>
+  <p><%= @user.display_name %></p>
 
-  <dt>Email:</dt>
-  <dd><%= @user.email %></dd>
+  <p><%= @user.email %></p>
+
+  </div>
 
 
-</dl>
+

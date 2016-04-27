@@ -4,6 +4,10 @@
 $font-stack: "Roboto Slab", serif;
 $body-bg: white;
 
+.logo {
+  text-align: center;
+}
+
 .header {
   font: $font-stack;
 }
@@ -65,8 +69,15 @@ p {
   color: white;
 }
 
+.profile {
+  text-align: center;
+}
 
-
+.image {
+  width: 250px;
+  border-radius: 25px;
+  border: 3px solid #4af;
+}
 
 
 
