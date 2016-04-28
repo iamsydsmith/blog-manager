@@ -20,9 +20,6 @@ $body-bg: white;
   text-align: center;
 }
 
-.h1 {
-  font-family: 'Raleway';
-}
 
 .title {
   font-family: "Roboto Slab", serif;
@@ -33,7 +30,7 @@ $body-bg: white;
 }
 
 .blog-post {
-  background-color: white;
+  background-color: #fbfcf7;
   border:1px solid gray;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -83,6 +80,18 @@ p {
 
 .profile {
   text-align: center;
+}
+
+.users {
+  background-color: #fbfcf7;
+  border:1px solid gray;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+.profile h1 {
+  font-family: 'American Typewriter';
 }
 
 .image {

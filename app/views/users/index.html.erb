@@ -3,35 +3,17 @@
     <span class="glyphicon glyphicon-plus"></span>
     New User
   <% end %>
-  <h1>Listing users</h1>
+  <h1>All users</h1>
 </div>
 
-<div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
-    <thead>
-      <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Display name</th>
-            <th>Email</th>
-            <th>Password digest</th>
-            <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
 
-    <tbody>
       <%= content_tag_for(:tr, @users) do |user| %>
-            <td><%= user.first_name %></td>
-            <td><%= user.last_name %></td>
-            <td><%= user.display_name %></td>
-            <td><%= user.email %></td>
-            <td><%= user.password_digest %></td>
-            <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <div class="profile users">
+            <h1><%= user.display_name %></h1>
+            <%= image_tag user.avatar.url, class: "image" %>
+            <br><br>
+            <p><strong>First name:</strong> <%= user.first_name %></p>
+            <p><strong>Last name:</strong> <%= user.last_name %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+      </div>
       <% end %>
-    </tbody>
-  </table>
-</div>
