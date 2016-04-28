@@ -20,6 +20,19 @@ $body-bg: white;
   text-align: center;
 }
 
+.about {
+  background-color: #fbfcf7;
+  border:1px solid gray;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 700px;
+  padding: 50px;
+  font-family: 'Raleway'
+}
+
+.about h1 {
+  font-family: 'American Typewriter';
+}
 
 .title {
   font-family: "Roboto Slab", serif;
