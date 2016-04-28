@@ -23,14 +23,22 @@ Heroku link: <https://notebook-blog-manager.herokuapp.com/>
 
 ## Wireframes
 
+### Home Page
 ![Sign In Page](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/SIGN%20IN%20PAGE.png)
+
+### Sign Up Page
 
 ![Sign Up Page](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/Sign%20up%20Page.png)
 
+### Listing of All Blogs Page
+
 ![All Blogs](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/All%20Blogs.png)
+
+### Create a New Blog Page
 
 ![New Blog](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/New%20Blog%20Post.png)
 
+### Edit Blog Page
 ![Edit Blog](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/Edit%20Post.png)
 
 ## Future Development
