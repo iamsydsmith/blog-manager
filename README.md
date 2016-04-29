@@ -43,5 +43,5 @@ Heroku link: <https://notebook-blog-manager.herokuapp.com/>
 
 ## Future Development
 * Install Devise
-* Add a comment model
 * Add a share blog feature
+* Add bootstrap
