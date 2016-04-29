@@ -16,6 +16,29 @@
       </div>
     </div>
     <%= link_to "Edit Blog", edit_blog_path(@blog) , class: 'button button1 hover' %><%= link_to 'Delete', @blog, class: 'button hover', method: :delete, data: { confirm: 'Are you sure?' , } %>
+
+
 </div>
+<h1>Comments</h1>
 
+<ul id="comments">
+  <% @comments.each do |comment| %>
+    <li><%= comment.commenter %></li>
+    <li><%= comment.body %></li>
+  <% end %>
+</ul>
 
+<h2>New Comment</h2>
+<%= form_for [@blog, @comment] do |f| %>
+  <ol>
+    <li>
+      <%= f.label :commenter %><br />
+      <%= f.text_field :commenter %>
+    </li>
+    <li>
+      <%= f.label :body %><br />
+      <%= f.text_area :body %>
+    </li>
+    <li><%= f.submit "Add comment" %></li>
+  </ol>
+<% end %>

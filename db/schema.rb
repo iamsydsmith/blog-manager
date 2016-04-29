@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426154649) do
+ActiveRecord::Schema.define(version: 20160429100528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20160426154649) do
   end
 
   add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "blog_id",    null: false
+  end
+
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -45,4 +55,5 @@ ActiveRecord::Schema.define(version: 20160426154649) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "blogs", "users"
+  add_foreign_key "comments", "blogs"
 end
