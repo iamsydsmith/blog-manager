@@ -46,7 +46,7 @@ $body-bg: white;
   background-color: #fbfcf7;
   border:1px solid gray;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 700px;
 }
 
@@ -111,6 +111,32 @@ p {
   width: 250px;
   border-radius: 25px;
   border: 3px solid #4af;
+}
+
+.comments {
+  font-family: 'Raleway';
+  margin-bottom: 30px;
+
+}
+
+.comments h3 {
+  color: #4af;
+}
+
+.new-comment {
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+.posted-comments {
+  padding: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.space {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 
