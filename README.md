@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Notebook** is a blog application with full CRUD (Create, Read, Update, Destroy) built in Ruby on Rails. I used the paperclip gem to add photos to user profiles and photos are stored to Amazon S3. Users can browse through their blog posts, create, update and delete their blog posts.
+**Notebook** is a blog application with full CRUD (Create, Read, Update, Destroy) built in Ruby on Rails. There are three models, User, Post and Comment. I used the paperclip gem to add photos to user profiles and photos are stored to Amazon S3. Users can browse through their blog posts, create, update, delete their blog posts and add a comment to their posts.
 
 Heroku link: <https://notebook-blog-manager.herokuapp.com/>
 
