@@ -41,7 +41,7 @@ Heroku link: <https://notebook-blog-manager.herokuapp.com/>
 ### Edit Blog Page
 ![Edit Blog](https://github.com/iamsydsmith/blog-manager/blob/master/app/assets/images/Edit%20Post.png)
 
-## Future Development
+## Future Developments
 * Install Devise
 * Add a share blog feature
 * Add bootstrap
