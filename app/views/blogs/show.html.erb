@@ -6,6 +6,7 @@
 
   <h1><%= @blog.title %></h1>
 </div>
+
  <div class="blog-post">
     <img class="photo_url" src="<%= @blog.photo %>">
     <div class="content">
@@ -15,19 +16,18 @@
        <p class="author link"><%= link_to @blog.user.display_name, @blog.user %></p>
       </div>
     </div>
-<div class="comments">
 
-<div class="posted-comments">
-<h3>Comments</h3>
-<ol>
-  <% @comments.each do |comment| %>
-    <div class="space"><strong>Name</strong>: <%= comment.commenter %><br><br>
-      <strong>Comment: </strong><%= comment.body %>
-    </div>
-
-  <% end %>
-</ol>
-</div>
+      <div class="comments">
+        <div class="posted-comments">
+          <h3>Comments</h3>
+          <ol>
+            <% @comments.each do |comment| %>
+            <div class="space"><strong>Name</strong>: <%= comment.commenter %><br><br>
+            <strong>Comment: </strong><%= comment.body %>
+            </div>
+            <% end %>
+          </ol>
+          </div>
 
 <div class="new-comment">
 <h3>New Comment</h3>
